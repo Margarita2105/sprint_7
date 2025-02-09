@@ -17,3 +17,9 @@ class Credential:
     color_grey = "GREY"
     color_black_grey = "BLACK, GREY"
     color_0 = ""
+
+class Response:
+    code_400_login_courier = {'code': 400, 'message': 'Недостаточно данных для входа'}
+    code_404_login_courier = {'code': 404, 'message': 'Учетная запись не найдена'}
+    code_409_new_courier = {'code': 409, 'message': 'Этот логин уже используется. Попробуйте другой.'}
+    code_400_new_courier = {'code': 400, 'message': 'Недостаточно данных для создания учетной записи'}
