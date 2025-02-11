@@ -6,14 +6,14 @@ class ApiMethodsOrder:
 
     @staticmethod
     @allure.step('Создаем новый заказ.')
-    def order_new(firstName_new: str, lastName_new: str, address_new: str, metroStation_new: int, phone_new: str, rentTime_new: int, deliveryDate_new: str, comment_new: str, color_new: str):
-        return requests.post(curl.orders_api, json={"firstName": firstName_new,
-        "lastName": lastName_new,
+    def order_new(first_name_new : str, last_name_new: str, address_new: str, metro_station_new: int, phone_new: str, rent_time_new: int, delivery_date_new: str, comment_new: str, color_new: str):
+        return requests.post(curl.orders_api, json={"firstName": first_name_new ,
+        "lastName": last_name_new,
         "address": address_new,
-        "metroStation": metroStation_new,
+        "metroStation": metro_station_new,
         "phone": phone_new,
-        "rentTime": rentTime_new,
-        "deliveryDate": deliveryDate_new,
+        "rentTime": rent_time_new,
+        "deliveryDate": delivery_date_new,
         "comment": comment_new,
         "color": [color_new]
         })

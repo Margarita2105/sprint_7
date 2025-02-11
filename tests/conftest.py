@@ -14,15 +14,6 @@ def login():
     ApiMethods.courier_delete(login, password)
 
 @pytest.fixture
-def login_generate():
-    login = generate_random_string(10)
-    password = generate_random_string(10)
-    first_name = generate_random_string(10)
-    login_pass = [login, password, first_name]
-
-    return login_pass
-
-@pytest.fixture
 def register():
     register = register_new_courier_and_return_login_password()
     yield register

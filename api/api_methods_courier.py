@@ -6,8 +6,8 @@ class ApiMethods:
 
     @staticmethod
     @allure.step('Создаем курьера.')
-    def courier_new(login_new: str, password_new: str, firstName_new: str):
-        return requests.post(curl.courier_api, json={"login": login_new, "password": password_new, "firstName": firstName_new})
+    def courier_new(login_new: str, password_new: str, first_name_new : str):
+        return requests.post(curl.courier_api, json={"login": login_new, "password": password_new, "firstName": first_name_new })
 
     @staticmethod
     @allure.step('Авторизуемся под созданным логином куьера.')
